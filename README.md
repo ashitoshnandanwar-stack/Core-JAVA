@@ -14,6 +14,7 @@ Code and Notes of java
 | 9        | `=` `+=` `-=`  | Assignment                        |   |            |
 
 - In Java, all arithmetic operations (+ - * /) promote operands smaller than int (byte, short, char) to int.
+- The extension of a compiled Java class is .class.
 ### Use of "this"
 - this points to the object that is calling the method or constructor.<br>
 - 1️⃣ Differentiate instance variables from local variables
@@ -175,9 +176,49 @@ class Main {
       a.show();
 }
 
-Output : A <br>
+Output : A 
 *Reason = Static methods are not polymorphic
 ```
+- Compile time is faster
+- Constructor can not be overridden
+- final method can not be overridden
+- Polymorphism works only with methods, not with variables
+
+##### Truncation
+- Truncation refers to the removal of digits after the decimal point.
+- When a floating-point value (float, double, etc.) is assigned to an integer type (int, long, etc.), the fractional part after the decimal point is discarded.
+Note: This operation requires explicit type casting.
+
+##### Selection Statement
+- Selection statements decide which block of code will execute.
+```
+Their are 4 types of selection statment
+1. if
+if Statement
+🔹 Meaning
+Executes a block only if condition is true
+
+2. if else
+if-else Statement
+🔹 Meaning
+Executes one block if condition is true
+Executes another block if condition is false
+
+3. else-if Ladder
+🔹 Meaning
+Used when multiple conditions are checked
+
+4. switch Statement
+🔹 Meaning
+Selects execution based on fixed values
+Better than long if-else ladders
+```
+| Statement | Use Case            |
+| --------- | ------------------- |
+| `if`      | Single condition    |
+| `if-else` | Two conditions      |
+| `else-if` | Multiple conditions |
+| `switch`  | Fixed values        |
 
 
 ### There are 4 OOPS concepts in Java. 
