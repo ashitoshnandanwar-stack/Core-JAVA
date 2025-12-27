@@ -108,8 +108,30 @@ This is polymorphism.
 ✔ Supports dynamic behavior <br>
 
 - Their two types of polymorphism 
-1. Compile time polymorphism(overloading) <br>
-2. Runtime polymorphism (overiding)
-   
+1. Compile time polymorphism(method overloading) <br>
+2. Runtime polymorphism (method overiding)
+
+##### Compile time polymorphism (method overloading)
+- same method name
+- different parameters
+- decide at compile time
+```
+class Main {
+    static int add(int a, int b) {
+        return a + b;
+    }
+    static double add(double a, double b) {
+        return a + b;
+    }
+    public static void main(String[] args) {
+        
+    double a = 5.85;
+    double b = 5.15;
+    System.out.println(add(a, b));
+
+    }
+}
+```
+
 ### There are 4 OOPS concepts in Java. 
 - Inheritance, Encapsulation, Polymorphism and Abstraction.
