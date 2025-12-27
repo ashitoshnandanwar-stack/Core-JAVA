@@ -16,7 +16,7 @@ Code and Notes of java
 #### Use of "this"
 - this points to the object that is calling the method or constructor.<br>
 <br>
-1️⃣ Differentiate instance variables from local variables
+- 1️⃣ Differentiate instance variables from local variables
 - When variable names are the same.
 ``` class Student {
     int id;
@@ -27,7 +27,7 @@ Code and Notes of java
 ```
 👉 Without this, Java gets confused.
 <br>
-2️⃣ Call current class instance variables.
+- 2️⃣ Call current class instance variables.
 ```
 class Test {
     void display() {
@@ -40,7 +40,7 @@ class Test {
 }
 ```
 
-3️⃣ Call current class methods
+- 3️⃣ Call current class methods
 ```
 class Test {
     void display() {
@@ -53,7 +53,7 @@ class Test {
 }
 ```
 
-4️⃣ Invoke current class constructor (Constructor Chaining)
+- 4️⃣ Invoke current class constructor (Constructor Chaining)
 ```
 class Example {
     Example() {
@@ -67,7 +67,7 @@ class Example {
 ```
 📌 this() must be the first statement in constructor.
 
-5️⃣ Pass current object as method parameter
+- 5️⃣ Pass current object as method parameter
 ```
 class A {
     void print(A obj) {
@@ -80,7 +80,7 @@ class A {
 }
 ```
 
-6️⃣ Return current object
+- 6️⃣ Return current object
 ```
 class Demo {
     Demo getObject() {
