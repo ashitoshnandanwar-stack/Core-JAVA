@@ -132,6 +132,53 @@ class Main {
     }
 }
 ```
+##### Run-time polymorphism (method overriding)
+- Parent class reference
+- Child class object
+- Method call decided at runtime
+```
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");}
+}
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+class Main {
+    public static void main(String[] args) {  
+       Animal a = new Dog();
+       a.sound();
+    }
+}
+
+output : Dog barks
+```
+
+- Example: Static Method (Important MCQ)
+```
+  class A {
+    static void show() {
+        System.out.println("A");
+    }
+}
+
+class B extends A {
+    static void show() {
+        System.out.println("B");
+    }
+}
+class Main {
+    public static void main(String[] args) {  
+      A a = new B();
+      a.show();
+}
+
+Output : A <br>
+*Reason = Static methods are not polymorphic
+```
+
 
 ### There are 4 OOPS concepts in Java. 
 - Inheritance, Encapsulation, Polymorphism and Abstraction.
