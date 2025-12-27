@@ -17,8 +17,9 @@ Code and Notes of java
 - this points to the object that is calling the method or constructor.<br>
 <br>
 - 1️⃣ Differentiate instance variables from local variables
-- When variable names are the same.
-``` class Student {
+ When variable names are the same.
+```
+class Student {
     int id;
     Student(int id) {
         this.id = id;   // instance variable = local variable
