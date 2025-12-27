@@ -13,3 +13,18 @@ Code and Notes of java
 | 8        | `||`           | Logical OR                        | ` |            |
 | 9        | `=` `+=` `-=`  | Assignment                        |   |            |
 
+#### Use of "this"
+- this points to the object that is calling the method or constructor.
+  1️⃣ Differentiate instance variables from local variables
+ - When variable names are the same.
+ - class Student {
+    int id;
+    Student(int id) {
+        this.id = id;   // instance variable = local variable
+    }
+}
+
+
+When variable names are the same.
+#### There are 4 OOPS concepts in Java. 
+- Inheritance, Encapsulation, Polymorphism and Abstraction.
