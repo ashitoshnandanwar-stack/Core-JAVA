@@ -13,6 +13,7 @@ Code and Notes of java
 | 8        | `||`           | Logical OR                        | ` |            |
 | 9        | `=` `+=` `-=`  | Assignment                        |   |            |
 
+- In Java, all arithmetic operations (+ - * /) promote operands smaller than int (byte, short, char) to int.
 #### Use of "this"
 - this points to the object that is calling the method or constructor.<br>
 - 1️⃣ Differentiate instance variables from local variables
@@ -88,6 +89,26 @@ class Demo {
     }
 }
 ```
+#### Polymorphism
+- One thing, many forms
+- One method but different behaviour
+```
+Real-Life Example
+Think about a person 👇
+At home → Father
+At school → Teacher
+At bank → Customer
+👉 Same person, different roles
+This is polymorphism.
+```
+- Why Do We Need Polymorphism?<br>
+✔ Code reusability <br>
+✔ Flexibility <br>
+✔ Less code, more functionality <br>
+✔ Supports dynamic behavior <br>
 
+- Their two types of polymorphism <br>
+1. Compile time polymorphism(overloading) <br>
+2. Runtime polymorphism (overiding)
 #### There are 4 OOPS concepts in Java. 
 - Inheritance, Encapsulation, Polymorphism and Abstraction.
