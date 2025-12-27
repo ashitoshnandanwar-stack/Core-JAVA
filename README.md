@@ -107,7 +107,7 @@ This is polymorphism.
 ✔ Less code, more functionality <br>
 ✔ Supports dynamic behavior <br>
 
-- Their two types of polymorphism <br>
+- Their two types of polymorphism 
 1. Compile time polymorphism(overloading) <br>
 2. Runtime polymorphism (overiding)
    
