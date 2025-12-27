@@ -14,8 +14,8 @@ Code and Notes of java
 | 9        | `=` `+=` `-=`  | Assignment                        |   |            |
 
 #### Use of "this"
-- this points to the object that is calling the method or constructor.
-- 1️⃣ Differentiate instance variables from local variables
+- this points to the object that is calling the method or constructor.<br>
+1️⃣ Differentiate instance variables from local variables
 - When variable names are the same.
 ``` class Student {
     int id;
