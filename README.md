@@ -14,7 +14,7 @@ Code and Notes of java
 | 9        | `=` `+=` `-=`  | Assignment                        |   |            |
 
 - In Java, all arithmetic operations (+ - * /) promote operands smaller than int (byte, short, char) to int.
-#### Use of "this"
+### Use of "this"
 - this points to the object that is calling the method or constructor.<br>
 - 1️⃣ Differentiate instance variables from local variables
  When variable names are the same.
@@ -89,7 +89,7 @@ class Demo {
     }
 }
 ```
-#### Polymorphism
+### Polymorphism
 - One thing, many forms
 - One method but different behaviour
 ```
@@ -110,5 +110,6 @@ This is polymorphism.
 - Their two types of polymorphism <br>
 1. Compile time polymorphism(overloading) <br>
 2. Runtime polymorphism (overiding)
-#### There are 4 OOPS concepts in Java. 
+   
+### There are 4 OOPS concepts in Java. 
 - Inheritance, Encapsulation, Polymorphism and Abstraction.
