@@ -15,7 +15,6 @@ Code and Notes of java
 
 #### Use of "this"
 - this points to the object that is calling the method or constructor.<br>
-<br>
 - 1️⃣ Differentiate instance variables from local variables
  When variable names are the same.
 ```
