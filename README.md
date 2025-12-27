@@ -220,6 +220,31 @@ Better than long if-else ladders
 | `else-if` | Multiple conditions |
 | `switch`  | Fixed values        |
 
+```
+class output 
+    {
+        public static void main(String args[])
+        { 
+           String c = "Hello i love java";
+           boolean var;
+           var = c.startsWith("Hello");
+           System.out.println(var);
+        }
+    }
+ Output : true
+but
+class output 
+    {
+        public static void main(String args[])
+        { 
+           String c = "Hello i love java";
+           boolean var;
+           var = c.startsWith("hello");
+           System.out.println(var);
+        }
+    }
+Output : false (because java is case sensitive.
+```
 
 ### There are 4 OOPS concepts in Java. 
 - Inheritance, Encapsulation, Polymorphism and Abstraction.
