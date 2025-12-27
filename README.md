@@ -232,7 +232,7 @@ class output
         }
     }
  Output : true
-but
+"But"
 class output 
     {
         public static void main(String args[])
@@ -245,6 +245,55 @@ class output
     }
 Output : false (because java is case sensitive.
 ```
+#### point
+String → immutable
+StringBuffer → mutable (slow but safe)
+StringBuilder → mutable (fast but not safe)
+
+```
+ class Output 
+    {
+        public static void main(String args[]) 
+        {
+            Integer i = new Integer(257);  
+            byte x = i.byteValue();
+            System.out.print(x);
+        }
+    }
+Output : 1
+Explanation: i.byteValue() method returns the value of wrapper i as a byte value. i is 257, range of byte is 256 therefore i value exceeds byte range by 1 hence 1 is returned and stored in x.
+```
+
+-  Object class is superclass of every class in Java.
+
+```
+import java.util.*;
+   class Arraylists
+   {
+       public static void main(String args[])
+       {
+           ArrayList obj = new ArrayList();
+           obj.add("A");
+           obj.add("B");
+           obj.add("C");
+           obj.add(1, "D");
+           System.out.println(obj);
+       }
+   }
+Output : [A, D, B, C]
+```
+#### Important Thread Methods
+| Method          | Purpose         |
+| --------------- | --------------- |
+| `start()`       | Start thread    |
+| `run()`         | Code execution  |
+| `sleep(ms)`     | Pause thread    |
+| `join()`        | Wait for thread |
+| `getName()`     | Thread name     |
+| `setPriority()` | Priority        |
+
+- ServerSocket is a java.net class which provides system independent implementation of server side socket connection.
+- Servlets execute within the address space of a web server. Since it is written in java it is platform independent. The full functionality is available through libraries.
 
 ### There are 4 OOPS concepts in Java. 
 - Inheritance, Encapsulation, Polymorphism and Abstraction.
