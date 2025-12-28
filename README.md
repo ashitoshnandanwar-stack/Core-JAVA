@@ -803,6 +803,7 @@ Each argument entered on the command line becomes an element in this array.<br>
 Therefore, the data type used to store command-line arguments is an array of string.
 - All command Line arguments are passed as a string. We must convert numerical value to their internal forms manually.
 - Recursions are always managed by using stack.
+  
 | Reason          | Loop              	| Recursion                   |
 | --------------- | -----------------   | --------------------------- |
 | Function calls  |  No extra calls     | Multiple function calls     |
