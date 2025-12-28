@@ -244,6 +244,125 @@ Explaination : If [] is declared after variable it is applicable only to one var
 - Generics gives the flexibility to strongly typecast collections. Generics is applicable to Set, List and Tree. It is not applicable to Array.
 -  Array is stored in heap space. Whenever an object is created, it’s always stored in the Heap space and stack memory contains the reference to it.
 -  Array elements are stored in contiguous memory. Linked List is stored in random memory locations.
+
+### Operands and Control Statements
+- The operand of arithmetic operators can be any of numeric or character type, But not boolean.
+- Modulus operator can be applied to both integers and floating point numbers.
+  ```
+  int x = 10;
+	x =+ 1;
+	System.out.println(x);
+  output : 1
+  Explaination : assign +1 to the x.
+  ```
+  ```
+   class Output 
+    {
+        public static void main(String args[]) 
+        {    
+             int a = 1;
+             int b = 2;
+             int c;
+             int d;
+             c = ++b;
+             d = a++;
+             c++;
+             b++;
+             ++a;
+             System.out.println(a + " " + b + " " + c + " " + d);
+        } 
+    }
+Output : 3 4 4 1
+Explainaion :   a = 1 , b = 2 
+	c = ++b , means b = 3, c = 3;
+	d = a++, means d = 1(first assign then increment), a = 2 ;
+	c++ = 4 ;
+	b++ = 3 ;
+	++a = 3 ;
+```
+  ```
+##### Bitwise operand
+- Invert bits → add 1 → make negative
+```
+ class bitwise_operator 
+    {
+        public static void main(String args[])
+        {
+            int var1 = 42;
+            int var2 = ~var1;
+            System.out.print(var1 + " " + var2);     	
+        } 
+    }
+    Output : 42 -43
+	~x = -(x + 1)
+```
+```
+class bitwise_operator 
+    {
+        public static void main(String args[]) 
+        {    
+             int a = 3;
+             int b = 6;
+ 	    	 int c = a | b;
+             int d = a & b;             
+             System.out.println(c + " "  + d);
+        } 
+    }
+Output : 7 2
+Explaination :
+Convert to bitwise
+a = 3  → 0011
+b = 6  → 0110
+
+Bitwise OR (|)
+Rule:
+If any bit = 1 → result = 1
+  0011
+| 0110    (OR operand any one is 1 output is 1)
+------
+  0111
+0111 (binary) = 7 (decimal)
+
+Bitwise AND (&)
+Rule:
+If both bits = 1 → result = 1
+  0011
+& 0110    (AND operand both are 1 then output is 1 otherwise 0)
+------
+  0010
+0010 (binary) = 2 (decimal)
+```
+- Left shift operator(<<) <br>
+ Shifts bits to the left <br>
+ Equivalent to multiplication by 2ⁿ
+```
+int a = 5;
+System.out.println(a << 1);
+5  = 00000101
+<<1 = 00001010
+value of a = 10
+
+int x = 8;
+System.out.println(x << 2);
+8 × 2² = 32
+32
+```
+- Right Shift operator(>>) <br>
+Shifts bits to the right <br>
+Equivalent to division by 2ⁿ
+```
+int a = 20;
+System.out.println(a >> 2);  
+20 ÷ 4 = 5
+value 5
+```
+- What is " ?: " ? <br> 
+?: is called the ternary operator or conditional operator.<br>
+It is a short form of if–else. <br>
+condition ? value_if_true : value_if_false;
+
+
+
 ### Use of "this"
 - this points to the object that is calling the method or constructor.<br>
 - 1️⃣ Differentiate instance variables from local variables
