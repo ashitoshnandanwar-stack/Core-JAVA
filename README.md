@@ -1,6 +1,6 @@
 # Core-JAVA
 Code and Notes of java
-
+### Precedence
 | Priority | Operators      | Description                       |   |            |
 | -------- | -------------- | --------------------------------- | - | ---------- |
 | 1        | `()`           | Parentheses                       |   |            |
@@ -13,6 +13,52 @@ Code and Notes of java
 | 8        | `||`           | Logical OR                        | ` |            |
 | 9        | `=` `+=` `-=`  | Assignment                        |   |            |
 
+```
+ class operators 
+    {
+        public static void main(String args[])
+        {
+            int var1 = 5; 
+            int var2 = 6;
+            int var3;
+            var3 = ++ var2 * var1 / var2 + var2;
+            System.out.print(var3);
+        } 
+    }
+Output : 12
+Explanation: Operator ++ has the highest precedence than / , * and +.
+var2 is incremented to 7 and then used in expression, var3 = 7 * 5 / 7 + 7, gives 12.
+```
+```
+class operators 
+    {
+        public static void main(String args[]) 
+        {    
+             int x = 8;
+             System.out.println(++x * 3 + " " + x);
+        } 
+    }
+Output : 27 9
+Explaination : Operator ++ has higher precedence than multiplication operator, *, x is incremented to 9 than multiplied with 3 giving 27.
+				9*3+_+9 gives 27 9
+```
+### Control Statements
+- Switch statements checks for equality between the controlling variable and its constant cases.
+- The do-while loop is also known as exit control loops, because it executes the code of the block before checking the conditional statement.
+- The continue statement skips the remaining code in the loop body for the current iteration and moves to the next one. It doesn’t exit the loop, just skips that specific pass.
+- While loop repeats a set of code only until the condition is met to be false.
+- Break halts the execution and forces the control out of the loop
+```
+Which of the following is not a decision making statement?
+a) if
+b) if-else
+c) switch
+d) do-while
+View Answer
+
+Answer: d
+Explanation: do-while is an iteration statement. Others are decision making statements.
+```
 ### Data type and variable
 | Data Type   | Category  | Size             | Range                                                   |
 | ----------- | --------- | ---------------- | ------------------------------------------------------- |
@@ -645,3 +691,9 @@ Output : [A, D, B, C]
 
 ### There are 4 OOPS concepts in Java. 
 - Inheritance, Encapsulation, Polymorphism and Abstraction.
+- Abstraction is the concept of defining real world objects in terms of classes or interfaces.
+- Encapsulation is implemented by combining methods and attribute into a class. The class acts like a container of encapsulating properties.
+- Association is a general “uses-a” relationship between two independent objects. Both can have their own lifecycles with no dependency on each other.<br>
+Example: A teacher and a department can be associated but exist independently.
+- Composition occurs when child object gets killed if parent object gets killed. Aggregation is also known as strong Aggregation.
+- Aggregation occurs when objects have their own life cycle and child object can associate with only one parent object.
