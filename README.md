@@ -13,6 +13,18 @@ Code and Notes of java
 | 8        | `||`           | Logical OR                        | ` |            |
 | 9        | `=` `+=` `-=`  | Assignment                        |   |            |
 
+
+| Data Type   | Category  | Size             | Range                                                   |
+| ----------- | --------- | ---------------- | ------------------------------------------------------- |
+| **byte**    | Integer   | 1 byte (8 bit)   | -128 to 127                                             |
+| **short**   | Integer   | 2 bytes (16 bit) | -32,768 to 32,767                                       |
+| **int**     | Integer   | 4 bytes (32 bit) | -2,147,483,648 to 2,147,483,647                         |
+| **long**    | Integer   | 8 bytes (64 bit) | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| **float**   | Floating  | 4 bytes (32 bit) | ±3.40282347E38                                          |
+| **double**  | Floating  | 8 bytes (64 bit) | ±1.79769313486231570E308                                |
+| **char**    | Character | 2 bytes (16 bit) | 0 to 65,535 (Unicode)                                   |
+| **boolean** | Logical   | JVM dependent*   | true / false                                            |
+
 - In Java, all arithmetic operations (+ - * /) promote operands smaller than int (byte, short, char) to int.
 - The extension of a compiled Java class is .class.
 ### Use of "this"
