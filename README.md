@@ -13,7 +13,7 @@ Code and Notes of java
 | 8        | `||`           | Logical OR                        | ` |            |
 | 9        | `=` `+=` `-=`  | Assignment                        |   |            |
 
-
+### Data type and variable
 | Data Type   | Category  | Size             | Range                                                   |
 | ----------- | --------- | ---------------- | ------------------------------------------------------- |
 | **byte**    | Integer   | 1 byte (8 bit)   | -128 to 127                                             |
@@ -25,8 +25,225 @@ Code and Notes of java
 | **char**    | Character | 2 bytes (16 bit) | 0 to 65,535 (Unicode)                                   |
 | **boolean** | Logical   | JVM dependent*   | true / false                                            |
 
+- Boolean variable can contain only one of two possible values, true and false. Everything in lowercase. Capitalized True and False are not boolean values in Java.
+
+ ```
+ class mainclass {
+        public static void main(String args[]) 
+        {
+            boolean var1 = true;
+	           boolean var2 = false;
+	    if (var1)
+	        System.out.println(var1);
+	    else
+	        System.out.println(var2);
+       } 
+    }
+output : true
+```
+```
+class booloperators {
+        public static void main(String args[]) 
+        {
+            boolean var1 = true;
+	    boolean var2 = false;
+	    System.out.println((var1 & var2));
+        } 
+    }
+Output : false
+Explaination : boolean ‘&’ operator always returns true or false. It returns true when both the values are true and false otherwise.
+Since, var1 is defined true and var2 is defined false hence their ‘&’ operator result is false.
+
+class booloperators {
+        public static void main(String args[]) 
+        {
+            boolean var1 = true;
+	    boolean var2 = false;
+	    System.out.println((var1 || var2));
+        } 
+    }
+output : true
+Explanation : In this one condition are true, because result is true.
+```
+##### Enum
+- An enum (enumeration) in Java is a special data type used to define a fixed set of constants.
+- Introduced in Java 5 <br>
+eg. enum Day { MON, TUE, WED, THU, FRI, SAT, SUN } <br>
+-  order of appearance of variables in Enum is their natural order (the natural order means the order in which they are declared inside Enum type). However, the compareTo() method is implemented to order the variable in ascending order.
+-  No, instances of Enum cannot be created outside of Enum boundary, because Enum does not have a public constructor.
+-  The ordinal() method retrieves the ordinal value of an enum constant, which represents its position within the enum declaration, starting from 0.
+-  Enum cannot have any modifiers. They are public, static and final by default.
+-  Enum types cannot extend class.
+
+| Method      | Use                      |
+| ----------- | ------------------------ |
+| `values()`  | Returns all constants    |
+| `valueOf()` | Converts String → enum   |
+| `ordinal()` | Position (starts from 0) |
+| `name()`    | Returns constant name    |
+
+```
+class TestEnum {
+    enum Color { RED, GREEN, BLUE }
+
+    public static void main(String[] args) {
+        Color c = Color.RED;
+        System.out.println(c);
+    }
+}
+Output : RED
+```
+```
+enum Enums
+{
+    A, B, C;
+ 
+    private Enums()
+    {
+        System.out.println(10);
+    }
+}
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Enum en = Enums.B;
+    }
+}
+Output : 10
+         10
+         10
+```
+#### Big Decimal
+- BigDecimal has unnatural syntax, needs more memory and creates a great amount of garbage. But it has a high precision which is useful for some calculations like money.
+- int, float, double provide overloaded methods for +,-,* and /.  But BigDecimal does not provide these overloaded methods.
+- BigDecimal.ONE is a static variable of BigDecimal class with value 1 on scale 0.
+- MathContext class is a library of functions to perform arithmetic operations of BigInteger and BigDecimal.
+```
+import java.math.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        double a = 0.02;
+        double b = 0.03;
+        double c = b - a;
+        System.out.println(c);
+ 
+        BigDecimal _a = new BigDecimal("0.02");
+        BigDecimal _b = new BigDecimal("0.03");
+        BigDecimal _c = _b.subtract(_a);
+        System.out.println(_c);
+    }
+}
+Output :  0.009999999999999998
+          0.01
+Explaination : BigDecimal provides more precision as compared to double. Double is faster in terms of performance as compared to BigDecimal.
+```
+##### DATE and Time
+- SimpleDateFormat takes a string containing pattern. sdf.format converts the Date object to String.
+- SimpleDateFormat takes a string containing pattern. sdf.parse converts the String to Date object.
+##### Literals and variable
+- A literal is a fixed value written directly in the program.
+ ```
+int a = 10;      // 10 is a literal
+char c = 'A';   // 'A' is a literal
+String s = "Hi"; // "Hi" is a literal
+```
+| Type                  | Example    |
+| --------------------- | ---------- |
+| Decimal (base 10)     | `10`, `25` |
+| Octal (base 8)        | `010`      |
+| Hexadecimal (base 16) | `0x1A`     |
+| Binary (base 2)       | `0b1010`   |
+
+- A variable is a named memory location used to store data.
+- Data type long literals are appended by an L(uppercase) or l(lowercase).
+  
 - In Java, all arithmetic operations (+ - * /) promote operands smaller than int (byte, short, char) to int.
 - The extension of a compiled Java class is .class.
+##### Type casting
+```
+class conversion 
+    {
+        public static void main(String args[]) 
+        {
+            double a = 295.04;
+            int  b = 300;
+            byte c = (byte) a;
+            byte d = (byte) b;
+            System.out.println(c + " "  + d);
+        } 
+    }
+Output : 39 44
+Explaination : Type casting a larger variable into a smaller variable results in modulo of larger variable by range of smaller variable. b contains 300 which is larger than byte’s range i:e -128 to 127 hence d contains 300 modulo 256 i:e 44.
+ byte store upto 128 max, because 300 = 128 + 128 + 44, hence for 300 show 44 answer
+ for 295.04 = show 39 (in byte not show decimal value)
+```
+
+```
+class A 
+    {
+        final public int calculate(int a, int b) { return 1; } 
+    } 
+    class B extends A 
+    { 
+        public int calculate(int a, int b) { return 2; } 
+    } 
+     public class output 
+     {
+        public static void main(String args[]) 
+        { 
+            B object = new B(); 
+            System.out.print("b is " + b.calculate(0, 1));  
+        } 
+    }
+Output : Compilation error
+Explaination : The code does not compile because the method calculate() in class A is final and so cannot be overridden by method of class b.
+```
+##### Array
+```
+class main_arguments 
+    {
+        public static void main(String [] args) 
+        {
+           int arr[] = new int [5];
+    System.out.print(arr);              
+        }
+    }
+Output : classname@hashcode in hexadecimal form
+Explaination : If we trying to print any reference variable internally, toString() will be called which is implemented to return the String in following form.
+```
+
+```
+matrix sum calculate
+eg.
+1  2  3
+4  5  6
+1+2+3+4+5+6 = 21
+
+eg.
+ int array_variable[][] = {{ 1, 2, 3}, { 4 , 5, 6}, { 7, 8, 9}};
+1+2+3+4+5+6+7+8+9 = 45
+
+eg.
+int[][] arr = {
+    {1},
+    {1, 2},
+    {1, 2, 3}
+};
+sum = 10
+```
+```
+int a[], b;
+int []c, d;
+ans :  ‘b’ is int variable; ‘d’ is int array
+Explaination : If [] is declared after variable it is applicable only to one variable. If [] is declared before variable it is applicable to all the variables.
+```
+- Generics gives the flexibility to strongly typecast collections. Generics is applicable to Set, List and Tree. It is not applicable to Array.
+-  Array is stored in heap space. Whenever an object is created, it’s always stored in the Heap space and stack memory contains the reference to it.
+-  Array elements are stored in contiguous memory. Linked List is stored in random memory locations.
 ### Use of "this"
 - this points to the object that is calling the method or constructor.<br>
 - 1️⃣ Differentiate instance variables from local variables
