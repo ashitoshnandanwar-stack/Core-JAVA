@@ -697,3 +697,116 @@ Output : [A, D, B, C]
 Example: A teacher and a department can be associated but exist independently.
 - Composition occurs when child object gets killed if parent object gets killed. Aggregation is also known as strong Aggregation.
 - Aggregation occurs when objects have their own life cycle and child object can associate with only one parent object.
+##### JDK, JRE, JVM
+- JDK is a core component of Java Environment and provides all the tools, executables and binaries required to compile, debug and execute a Java Program.
+- JRE is the implementation of JVM, it provides platform to execute java programs.
+- JVM (Java Virtual Machine) is responsible for interpreting bytecode into machine-specific code. It executes the bytecode and manages memory, security, and platform independence.
+- JIT is responsible to optimize bytecode to machine code
+##### class and objects
+```
+class main_class 
+    {
+        public static void main(String args[])
+        {
+            int x = 9;
+            if (x == 9) 
+            { 
+                int x = 8;
+                System.out.println(x);
+            }
+        } 
+    }
+Output: Compilation error
+Explanation: Two variables with the same name can’t be created in a class.
+But
+class main_class 
+    {
+        static int x = 9;
+        public static void main(String args[])
+        {
+           
+            if (x == 9) 
+            { 
+                int x = 8;
+                System.out.println(x);
+            }
+        } 
+    }
+Output : 8
+```
+- The finalize() method in Java is a method of the Object class used to perform cleanup activity before an object is destroyed. It can be call by garbage collector or manually.
+```
+ class box 
+    {
+        int width;
+        int height;
+        int length;
+        int volume;
+        void finalize() 
+        {
+            volume = width*height*length;
+            System.out.println(volume);
+        }
+        protected void volume() 
+       {
+            volume = width*height*length;
+            System.out.println(volume);
+       } 
+    }    
+    class Output 
+    { 
+        public static void main(String args[])
+        {
+            box obj = new box();
+            obj.width=5;
+            obj.height=5;
+            obj.length=6;
+            obj.volume();
+        } 
+    }
+Output : Compilation error
+Explaination : The code results in a compilation error because the class box contains both a field named volume and a method named volume().
+In Java, having a method and a variable with the exact same name in the same class causes a naming conflict, which is not allowed.
+```
+-  finalize() method is called just prior to garbage collection. it is not called when object goes out of scope.
+-  The method getInstance() can be used to create an object if the class doesn’t have any constructor.
+-   Protected constructor can only be called using super().<br> Protected access modifier means that constructor can be accessed by child classes of the parent class and classes in the same package.
+-   A mark and sweep garbage collection consists of two phases, the mark phase and the sweep phase.
+  	I mark phase all the objects reachable by java threads, native handles and other root sources are marked alive and others are garbage.
+	In sweep phase, the heap is traversed to find gaps between live objects and the gaps are marked free list used for allocating memory to new objects.
+- 	Overloading is a very powerful feature of java, which allows the developer to declare multiple methods or constructors with the same name but different functionality, which improves readability and flexibility of the program.
+- 	Encapsulation is the process of wrapping data (variables) and methods that operate on the data into a single unit (class), and controlling access to the class members using access specifiers like private, public, and protected. This helps protect the internal state and hides implementation details.
+- 	For a class to be inherited by another subclass (even in a different package), it must be declared public.<br> If a class has default (no modifier) access, it can only be inherited within the same package. Private classes cannot be inherited.
+- 	The variables should be private in the class and should be accessed with get and set methods.
+- 	The protected access modifier is accessible within package and outside the package but only through inheritance. <br> The protected access modifier can be used with data member, method and constructor. It cannot be applied in the class.
+- 	In Java, arrays are implemented as objects. Even arrays of primitive types (like int[], char[]) are considered objects, and they inherit methods from the Object class.
+- 	charAt() is a predefined method of string class which returns the character of specified index passed to it. Java does not support traditional [ ] to access the character at specified index.
+- 	Strings in Java are immutable that is they can not be modified.ava defines a peer class of String, called StringBuffer, which allows string to be altered.
+- 	When parameterised constructor not created, then default constructor are automatically created in class.
+- 	Only main() method can be given parameters via using command line arguments.
+```
+Static blocks execute before main(), not static methods.
+class Test {
+    static {
+        System.out.println("Static block");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main method");
+    }
+}
+Output: Static block
+		Main method
+```
+-  In Java, command-line arguments are stored in a String array passed to the main method as String[] args.<br>
+Each argument entered on the command line becomes an element in this array.<br>
+Therefore, the data type used to store command-line arguments is an array of string.
+- All command Line arguments are passed as a string. We must convert numerical value to their internal forms manually.
+- Recursions are always managed by using stack.
+| Reason          | Loop              	| Recursion                   |
+| --------------- | -----------------   | --------------------------- |
+| Function calls  |  No extra calls     | Multiple function calls     |
+| Stack usage     | Less                | More (call stack)           |
+| Memory overhead | Low                 | High                        |
+| Execution speed | Faster              | Slower                      |
+| Risk            | No stack overflow   | StackOverflowError possible |
