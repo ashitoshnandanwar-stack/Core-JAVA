@@ -816,3 +816,113 @@ Therefore, the data type used to store command-line arguments is an array of str
 -  The method overriding is the process of redeclaration of a parent’s method in the child class with the same name and method signature.
 -  To disallow a method from being overridden, specify final as a modifier at the start of its declaration. Methods declared as final cannot be overridden.
 -   An abstract class is incomplete by itself and relies upon its subclasses to provide a complete implementation. The object of abstract classes are not created, we have to inherit it and then create the object of its subclass.
+-   The extends keyword is used in Java to inherit a class. It allows a subclass to acquire the properties and methods of a superclass.
+```
+Inheritance is a way of acquiring attributes and methods of parent class. Java supports hierarchical inheritance directly.
+There are only 5 types of Inheritance Exists.
+Single Inheritance
+Multilevel Inheritance
+Hierarchical Inheritance
+Multiple Inheritance (using interfaces, not classes.)
+Hybrid Inheritance
+```
+- Multiple inheritance in java is implemented using interfaces. Multiple interfaces can be implemented by a class.
+- Interface is implemented using implements keyword. A concrete class must implement all the methods of an interface, else it must be declared abstract.
+### String handling
+```
+public class String_demo 
+    {
+        public static void main(String args[])
+        {
+            int ascii[] = { 65, 66, 67, 68};
+            String s = new String(ascii, 1, 3);
+            System.out.println(s);
+        }
+   }
+Output : BCD
+Explaination :
+	65 → A
+	66 → B
+	67 → C
+	68 → D
+	String(int[] ascii, int offset, int count)
+	offset = 1 → start from index 1
+	count = 3 → take 3 characters
+	ascii[1] → 66 → B
+	ascii[2] → 67 → C
+	ascii[3] → 68 → D
+	Answer : BCD
+```
+- equals() method of string class returns boolean value true if both the string are equal and false if they are unequal.
+```
+ class output 
+    {
+        public static void main(String args[])
+        { 
+           String s1 = "Hello i love java";
+           String s2 = new String(s1);
+           System.out.println((s1 == s2) + " " + s1.equals(s2));
+        }
+    }
+Output : false true
+Explaination : The == operator compares two object references to see whether they refer to the same instance, where as equals() compares the content of the two objects.
+```
+```
+ compareTo() method returns the int value
+-ve when comparing string is smaller than comparing string.
++ve when comparing string is greater than comparing string.
+0 when comparing strings are equal.
+```
+```
+ class output 
+    {
+        public static void main(String args[])
+        { 
+           String s1 = "Hello";
+           String s2 = s1.replace('l','w');
+           System.out.println(s2);
+        }
+    }
+Output : Hewwo
+Explaination : replace() method replaces all occurrences of one character in invoking string with another character.
+s1.replace(‘l’,’w’) replaces every occurrence of ‘l’ in Hello by ‘w’, giving Hewwo.
+```
+```
+class output 
+    {
+        public static void main(String args[])
+        {
+           String s1 = "Hello World";
+           String s2 = s1.substring(0 , 4);
+           System.out.println(s2);
+        }
+   }
+Output : Hell
+Explaination : substring(0,4) returns the character from 0 th position to 3 rd position.
+```
+```
+class output 
+    {
+        public static void main(String args[])
+        { 
+             StringBuffer c = new StringBuffer("Hello");
+             StringBuffer c1 = new StringBuffer(" World");
+             c.append(c1);
+             System.out.println(c);
+        }
+    }
+Output : Hello World
+Explaination : append() method of class StringBuffer is used to concatenate the string representation to the end of invoking string.
+```
+```
+Which of the following are incorrect form of StringBuffer class constructor?
+a) StringBuffer()
+b) StringBuffer(int size)
+c) StringBuffer(String str)
+d) StringBuffer(int size , String str)
+View Answer
+
+Answer: d
+Explanation: The StringBuffer class has three valid constructors: one with no arguments, one with an integer (capacity), and one with a string. A constructor with both an int and a String does not exist, so it’s invalid.
+```
+
