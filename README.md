@@ -811,3 +811,8 @@ Therefore, the data type used to store command-line arguments is an array of str
 | Memory overhead | Low                 | High                        |
 | Execution speed | Faster              | Slower                      |
 | Risk            | No stack overflow   | StackOverflowError possible |
+
+### Overidding
+-  The method overriding is the process of redeclaration of a parent’s method in the child class with the same name and method signature.
+-  To disallow a method from being overridden, specify final as a modifier at the start of its declaration. Methods declared as final cannot be overridden.
+-   An abstract class is incomplete by itself and relies upon its subclasses to provide a complete implementation. The object of abstract classes are not created, we have to inherit it and then create the object of its subclass.
